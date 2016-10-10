@@ -10,6 +10,8 @@ Work in progress
 - (Yeoman to scaffold the project)
 - (Gulp to automate some tasks)
 
+Source code is located in the [app](https://github.com/cubiio/fccfe-localWeather/tree/master/app) folder.
+
 ## Demo
 The demo can be found [at not a real url yet](url).
 
