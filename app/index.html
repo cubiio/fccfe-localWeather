@@ -1,41 +1,49 @@
 <!doctype html>
 <html lang="">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Local Weather</title>
-
     <!-- Place favicon.ico in the root directory -->
-
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
-  </head>
-  <body>
+</head>
+
+<body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div>
-      <h1>Hello World</h1>
+    <div class="container">
+        <div>
+            <h1>Free Code Camp</h1>
+            <h1>Weather App</h1>
+            <p id="location">Placeholder for location</p>
+            <p id="temperature">Placeholder for temperature</p>
+            <p id="weather">Placeholder for weather type</p>
+            <p id="weather-img">Placeholder for weather image</p>
+        </div>
     </div>
-    
-
-
+    <div class="container">
+        <footer class="footer">
+            <p>Built with ♥ by <a href="https://github.com/cubiio">Cubiio</a>. View source code on <a href="https://github.com/cubiio/fccfe-localWeather">Github</a></p>
+        </footer>
+    </div>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
-    
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-  </body>
+</body>
+
 </html>
