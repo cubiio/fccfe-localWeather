@@ -2,6 +2,7 @@
 "use strict";
 
 // Function gets the location of the user provided the user opts in
+// function adapted from Sitepoint; https://www.sitepoint.com/html5-geolocation
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(userPosition, showError);
 } else {
