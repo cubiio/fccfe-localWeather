@@ -1,19 +1,23 @@
-# Local Weather
+# Local Weather App
 
 ## Status
-Work in progress
+*Work in progress*
 
 ## Built with:
 - HTML
 - CSS (and maybe Sass)
+- Bootstrap
 - Javascript
-- (Yeoman to scaffold the project)
-- (Gulp to automate some tasks)
+- jQuery
+- Yeoman to scaffold the project
+- Gulp to automate tasks
 
 Source code is located in the [app](https://github.com/cubiio/fccfe-localWeather/tree/master/app) folder.
 
 ## Demo
-The demo can be found [at not a real url yet](url).
+The demo can be found [at not a real url yet](url). 
+
+**TODO:** add url when project is live.
 
 ## Free Code Camp: Key Challenge Info
 **User Stories:**
