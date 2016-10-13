@@ -56,11 +56,18 @@ function showError(error) {
 }
 
 // if AJAX is successful triggers these actions
-// adds temp in Fahrenheit
 // displays weather icon
 $(document).ajaxSuccess(function() {
 	console.log(weather);
-	$('#temperature').prepend(weather.currently.temperature + " °F");
+	// log weather json to the console
+
+	var tempFah = Math.trunc(weather.currently.temperature);
+	// store default temp in fahrenheit as var tempFah
+	var tempCel = Math.trunc((tempFah - 32) * 0.5556);
+	// convert temp into celsius and store as var tempCel
+ 
+	$('#temperature').prepend(tempCel + " °C");
+	// prepend temp in celsius to the temperature placeholder 
 
 	var imagePNG = '.png';
 	$('#weather-icon-placeholder').append("<img id=weather.currently.icon src='/images/' + weather.currently.icon + imagePNG/>"); 
