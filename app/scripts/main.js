@@ -10,17 +10,31 @@ navigator.geolocation.getCurrentPosition(userPosition, showError);
         alert('Geolocation is not supported in your browser so cannot display your local weather');
 }
 
+// declare global variable to store our weather information after the ajax call 
+var weather;
+
 // Success callback function
 // Determine's user location and builds in latitude and longitude into the DarkSky API url
 function userPosition(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
-	console.log("User's latitude is " + lat + " User's longitude is " + lon);
 
 	// Next line builds the API url for DarkSky
 	var darkSkyAPI = 'https://api.darksky.net/forecast/' + darkSkyToken + '/' + lat + ',' + lon;
-    console.log(darkSkyAPI);
-    return darkSkyAPI;
+
+	// start ajax
+	$.ajax({
+      url: darkSkyAPI,
+      type: "GET",
+      dataType: "jsonp",
+      success: function (data) {
+      	weather = data;
+	}, 
+	      xhrFields: {
+	    withCredentials: false
+	  } 
+	    }) 
+    // end ajax
 }
 
 // Error callback function
@@ -41,18 +55,14 @@ function showError(error) {
         }
 }
 
+// if AJAX is successful triggers these actions
+// adds temp in Fahrenheit
+// displays weather icon
+$(document).ajaxSuccess(function() {
+	console.log(weather);
+	$('#temperature').prepend(weather.currently.temperature + " °F");
 
-$.ajax({
-      url: 'https://api.darksky.net/forecast/c9ef245f82717baa8be804cab471c6f2/51,0',
-      type: "GET",
-      dataType: "jsonp",
-      success: function (weather) {
-      	$('#temperature').prepend(weather.currently.temperature);
-      	$('#weather-icon').append(weather.currently.icon);
-  		// console.log(weather.currently.icon);
-
-}, 
-      xhrFields: {
-    withCredentials: false
-  } 
-    }) // end ajax
+	var imagePNG = '.png';
+	$('#weather-icon-placeholder').append("<img id=weather.currently.icon src='/images/' + weather.currently.icon + imagePNG/>"); 
+	// TODO on local throws error, can't find images folder
+})
