@@ -72,4 +72,13 @@ $(document).ajaxSuccess(function() {
 	var imagePNG = '.png';
 	$('#weather-icon-placeholder').append("<img id=weather.currently.icon src='/images/' + weather.currently.icon + imagePNG/>"); 
 	// TODO on local throws error, can't find images folder
-})
+
+	// toggles between Fah and Cel when user clicks on the temperature
+	$('#temperature').click(function () {
+	  if ($('#temperature').text().indexOf('C') > -1) {
+	    $('#temperature').text(tempFah + '° F');
+	  } else {
+	    $('#temperature').text(tempCel + '° C');
+	  }
+	});
+});
