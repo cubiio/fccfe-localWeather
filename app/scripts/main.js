@@ -70,11 +70,9 @@ $(document).ajaxSuccess(function() {
 	$('#temperature').prepend(tempCel + " °C");
 	// prepend temp in celsius to the temperature placeholder 
 
-	// var url = 'images/' + weather.currently.icon +'.png';
-	// document.getElementById("weather-icon-placeholder").src = url;
-
 	var imagePNG = weather.currently.icon + '.png';
-	$('#weather-icon-placeholder').append("<img id=weather.currently.icon src='images/' + imagePNG/>"); 
+	console.log(imagePNG);
+	$('#weather-icon-placeholder').append("<img id=weather.currently.icon src='https://github.com/cubiio/fccfe-localWeather/tree/gh-pages/images/' + imagePNG/>"); 
 	// TODO on local throws error, can't find images folder
 
 	// toggles between Fah and Cel when user clicks on the temperature
