@@ -70,8 +70,11 @@ $(document).ajaxSuccess(function() {
 	$('#temperature').prepend(tempCel + " °C");
 	// prepend temp in celsius to the temperature placeholder 
 
-	var imagePNG = '.png';
-	$('#weather-icon-placeholder').append("<img id=weather.currently.icon src='/images/' + weather.currently.icon + imagePNG/>"); 
+	// var url = 'images/' + weather.currently.icon +'.png';
+	// document.getElementById("weather-icon-placeholder").src = url;
+
+	var imagePNG = weather.currently.icon + '.png';
+	$('#weather-icon-placeholder').append("<img id=weather.currently.icon src='images/' + imagePNG/>"); 
 	// TODO on local throws error, can't find images folder
 
 	// toggles between Fah and Cel when user clicks on the temperature
