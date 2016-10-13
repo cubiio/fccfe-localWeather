@@ -60,6 +60,7 @@ function showError(error) {
 $(document).ajaxSuccess(function() {
 	console.log(weather);
 	// log weather json to the console
+	$('#location').append(weather.timezone);
 
 	var tempFah = Math.trunc(weather.currently.temperature);
 	// store default temp in fahrenheit as var tempFah
