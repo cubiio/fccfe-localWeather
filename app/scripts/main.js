@@ -73,7 +73,7 @@ $(document).ajaxSuccess(function() {
 	var imagePNG = weather.currently.icon + '.png';
 	console.log(imagePNG); // e.g. partly-cloudy-night.png
 
-	$('#weather-icon-placeholder').html('<img src="/images/"'  + imagePNG '>'); 
+	$('#weather-icon-placeholder').html('<img src="/images/' + imagePNG + '" >'); 
 	// TODO add alt=""
 
 	// toggles between Fah and Cel when user clicks on the temperature
