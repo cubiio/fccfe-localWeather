@@ -23,12 +23,14 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="container">
+    <div class="container-fluid center-block text-center">
         <div>
-            <h1>Free Code Camp</h1>
-            <h1>Weather App</h1>
-            <p id="temperature"></p>
-            <div id="weather-icon-placeholder"></div>
+            <h1 class="">Free Code Camp</h1>
+            <h1>Local Weather App</h1>
+            <p id="temperature" class="btn"></p>
+            <div id="weather-icon-placeholder" class="img-responsive"></div>
+            <p id="weather-load" class="fa fa-spinner fa-pulse fa-3x fa-fw"></p>
+            <span id="weather-load" class="sr-only">Loading local weather...</span>
         </div>
     </div>
     <div class="container">
@@ -36,7 +38,7 @@
         <footer class="footer">
             <div class="container-fluid text-center">
                 <div class="footer-text text-muted row">
-                    <p>Powered by <a href="https://darksky.net/poweredby/" title="Dark sky">Dark Sky</a> Weather icons made by <a href="http://www.flaticon.com/authors/kirill-kazachek" title="icon-credit">Kirill Kazacheck</a> from <a href="http://www.flaticon.com/" title="icon-site">www.flaticon.com</a></p>
+                    <p>Powered by <a href="https://darksky.net/poweredby/" title="Dark sky">Dark Sky</a>. Weather icons made by <a href="http://www.flaticon.com/authors/kirill-kazachek" title="icon-credit">Kirill Kazacheck</a> from <a href="http://www.flaticon.com/" title="icon-site">www.flaticon.com</a></p>
                     <p>Built with ♥ by <a href="https://github.com/cubiio">Cubiio</a>. View source code on <a href="https://github.com/cubiio/fccfe-randomQuoteGen">Github</a></p> 
                 </div>
                 <div class="footer-logos row">

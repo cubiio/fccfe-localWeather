@@ -73,8 +73,13 @@ $(document).ajaxSuccess(function() {
 	var imagePNG = weather.currently.icon + '.png';
 	console.log(imagePNG); // e.g. partly-cloudy-night.png
 
-	$('#weather-icon-placeholder').html('<img src="/images/' + imagePNG + '" >'); 
-	// TODO add alt=""
+	$('#weather-load').hide();
+	// removes load animation
+
+	$('#weather-icon-placeholder').html('<img src="/images/' + imagePNG + ' "  alt="weather image">'); 
+	// adds weather icon representing local weather
+	// 	$('#weather-icon-placeholder').html('<img src="/images/' + imagePNG + ' " img style="max-width: 200px;" alt="weather image">'); 
+
 
 	// toggles between Fah and Cel when user clicks on the temperature
 	$('#temperature').click(function () {
