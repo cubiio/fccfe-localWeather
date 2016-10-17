@@ -76,10 +76,12 @@ $(document).ajaxSuccess(function() {
 	$('#weather-load').hide();
 	// removes load animation
 
-	$('#weather-icon-placeholder').html('<img src="/images/' + imagePNG + ' "  alt="weather image">'); 
-	// adds weather icon representing local weather
-	// 	$('#weather-icon-placeholder').html('<img src="/images/' + imagePNG + ' " img style="max-width: 200px;" alt="weather image">'); 
 
+	$('#weather-icon-placeholder').html('<img src="https://dl.dropboxusercontent.com/u/46898029/local-weather/' + imagePNG + ' " alt="weather image">'); 
+	// adds weather icon representing local weather
+ 
+	// use to test locally
+	// $('#weather-icon-placeholder').html('<img src="../images/' + imagePNG + ' " alt="weather image">'); 
 
 	// toggles between Fah and Cel when user clicks on the temperature
 	$('#temperature').click(function () {
